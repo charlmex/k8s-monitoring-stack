@@ -92,7 +92,18 @@ Access Prometheus at http://localhost:9090
 
 ### Integrating Loki as datasource oin grafana
 
+1. Log in to Grafana: Use the credentials mentioned above.
+2. Add DataSource:
+- Navigate to Configuration > Data Sources.
+- Click on Add data source.
+- Select Loki from the list.
 
+3. Configure Loki DataSource:
+In the URL field, enter the service name for Loki:
+
+http://loki-stack:3100
+
+Click Save & Test to verify the connection.
 
 ### Notes:
 - Modify the instructions as needed based on your specific setup or preferences.
