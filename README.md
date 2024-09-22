@@ -69,9 +69,9 @@ Once the applications are deployed, you can access Grafana and Prometheus.
 
 # Grafana
 
-Get the Grafana service URL:
+   Get the Grafana service URL:
 
-   ``` bash
+   ```bash
    kubectl port-forward svc/kube-prometheus-stack-grafana -n monitoring 3000:80
 
  Access Grafana at http://localhost:3000. The default credentials are usually:
@@ -79,11 +79,12 @@ Get the Grafana service URL:
 Username: admin
 Password: prom-operator 
 
-# Prometheus
 
-Get the Prometheus service URL:
+#  Prometheus
 
-   ``` bash
+   Get the Prometheus service URL:
+
+   ```bash
    kubectl port-forward svc/kube-prometheus-stack-prometheus -n monitoring 9090:9090
 
 Access Prometheus at http://localhost:9090
@@ -106,6 +107,7 @@ http://loki-stack:3100
 Click Save & Test to verify the connection.
 
 ### Notes:
+
 - Modify the instructions as needed based on your specific setup or preferences.
 - Make sure to test the commands to ensure they work as expected.
 - Add any additional sections that you think would be useful, like troubleshooting tips or FAQs.
