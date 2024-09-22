@@ -50,3 +50,21 @@ kubectl get pods
 
 # Port-forward to access NGINX (optional)
 #kubectl port-forward svc/my-nginx 8080:80
+
+
+
+
+# Install ArgoCD
+echo "Installing ArgoCD..."
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+# Wait for ArgoCD server to be ready
+kubectl wait --for=condition=available --timeout=60s deployment/argocd-server -n argocd
+
+# Expose the ArgoCD server
+kubectl port-forward svc/argocd-server -n argocd 8082:443 &
+
+echo "ArgoCD installed. Access it at http://localhost:8082."
+echo "Default username: admin"
+echo "Retrieve the initial password with: kubectl get pods -n argocd -o name | grep argocd-server | xargs -I {} kubectl logs {} -n argocd | grep 'admin' | awk '{print $NF}'"
