@@ -1,0 +1,12 @@
+loki:
+  persistence:
+    enabled: true
+    size: 50Gi
+  retention_period: 15d
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "200m"
+    limits:
+      memory: "2Gi"
+      cpu: "500m"
