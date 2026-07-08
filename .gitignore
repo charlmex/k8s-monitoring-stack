@@ -1,0 +1,106 @@
+# ==========================
+# Kubernetes
+# ==========================
+
+# Local kubeconfig files
+kubeconfig
+*.kubeconfig
+
+# Kubernetes client configuration
+.kube/
+
+# Generated Kubernetes manifests
+*.yaml.bak
+*.yml.bak
+
+
+# ==========================
+# Secrets and Credentials
+# ==========================
+
+.env
+.env.*
+*.secret
+*.key
+*.pem
+*.crt
+
+# Kubernetes secret files
+secret.yaml
+secrets.yaml
+*-secret.yaml
+*-secrets.yaml
+
+
+# ==========================
+# Helm
+# ==========================
+
+# Helm cache
+.helm/
+
+# Helm generated dependencies
+charts/*/charts/
+
+# Helm package artifacts
+*.tgz
+
+# Helm lock files (optional)
+# Uncomment if you do not want dependency locks tracked
+# Chart.lock
+
+
+# ==========================
+# kind / Local Kubernetes
+# ==========================
+
+# kind cluster state
+kind-data/
+
+# Local cluster configs
+*.clusterconfig
+
+
+# ==========================
+# Terraform (future use)
+# ==========================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+
+
+# ==========================
+# Docker
+# ==========================
+
+.docker/
+
+
+# ==========================
+# IDE / OS Files
+# ==========================
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+
+# ==========================
+# Logs
+# ==========================
+
+*.log
+logs/
+
+
+# ==========================
+# Temporary Files
+# ==========================
+
+*.tmp
+*.swp
+*~
